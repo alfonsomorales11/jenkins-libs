@@ -9,7 +9,7 @@ def verify(Map params) {
         }
 
         sh "mvn clean verify sonar:sonar \
-            -Dsonar.projectKey=${project_key} \
+            -Dsonar.projectKey=${the_project_key} \
             -Dsonar.host.url=${sonar_url} \
             -Dsonar.login=$SONAR_TOKEN_X"
     }
