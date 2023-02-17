@@ -1,3 +1,3 @@
 def deploy(Map params) {
-    sh "ssh pachi@192.168.100.124 'helm install ${params.helmName} alfonsomorales11/${params.chart_name} --set-string namespace.name=${params.namespace} --set-string deploymentName=${params.deploymentName} --set-string repositoryURL=${params.nexusURL} --set-string dockerConfig.value=${params.dockerConfigValue} --set-string image.name=${params.imageName} --set-string image.tag=$BUILD_NUMBER --set-string secretName=${params.secretName}'"
+    sh "ssh pachi@192.168.100.124 'helm install ${params.helmName} alfonsomorales11/${params.chart_name} --set-string namespace.name=${params.namespace} --set-string deploymentName=${params.deploymentName} --set-string repositoryURL=${params.nexusURL} --set-string dockerConfig.value=${params.dockerConfigValue} --set-string image.name=${params.imageName} --set-string image.tag=${params.imageTag} --set-string secretName=${params.secretName}'"
 }
