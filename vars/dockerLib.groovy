@@ -7,5 +7,3 @@ def build(Map params) {
 def push(Map params) {
     sh "ssh root@172.21.0.2 'docker push ${params.repository_url}/${params.image_name}:${params.build_number}'"
 }
-
-a
