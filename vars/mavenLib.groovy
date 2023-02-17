@@ -1,3 +1,3 @@
 def build(Map params) {
-    sh "mvn ${params.steps}"
+    sh "mvn ${params.commands}"
 }
